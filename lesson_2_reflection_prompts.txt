@@ -1,18 +1,42 @@
 What happens when you initialize a repository? Why do you need to do it?
 
+    git init
+    There comes no commit after I inntialized it.
+    I can see whether my files are tracked or not.
+
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
-How can you use the staging area to make sure you have one commit per logical
-change?
+    git add filename
+    git commit
+    It allows not to commit all files in my workong directory at the same time. Therefore, make in's more logical.
 
-What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
+How can you use the staging area to make sure you have one commit per logical change?
+
+    git diff : working dictionary and staging area
+    git diff --staged : staging area and commit
+    git diff commit1 commit2
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+    git branch
+    git branch branchname
+    git checkout branchname
 
 How do the diagrams help you visualize the branch structure?
 
-What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+    git log --graph (--oneline) branchname branchname
 
-What are the pros and cons of Git’s automatic merging vs. always doing merges
-manually?
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+    (git checkout master_branch)
+    git merge sub_branch (master-branch)
+    (git branch -d sub_branch)
+
+    git show commit ID
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+    Conflicts
+    three parts
+    after solve the conflicts, go on git commit
